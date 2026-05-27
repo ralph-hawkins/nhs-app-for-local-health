@@ -2,3 +2,18 @@
 @import "nhsuk-frontend/dist/nhsuk";
 
 // Add your custom CSS/Sass styles below.
+
+// Stop images overflowing their grid column / the page,
+// and add space below each one.
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: nhsuk-spacing(5);
+}
+
+// Tighten the gap between a list lead-in line (e.g. "...so they can:") and its
+// first bullet, so it matches the spacing between the bullets themselves.
+// List items use nhsuk-spacing(2) (8px), so match that here.
+.app-list-lead-in {
+  margin-bottom: nhsuk-spacing(2);
+}

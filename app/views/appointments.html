@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+{% set pageName = "NHS Appointments" %}
+{% block main %}
+  <div class="nhsuk-width-container">
+    {{ backLink({
+      href: "/"
+    }) }}
+    <main class="nhsuk-main-wrapper" id="maincontent">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h1 class="nhsuk-heading-xl">NHS Appointments</h1>
+          <p class="nhsuk-body app-list-lead-in">
+            Make it easy for people to schedule services around their needs, so they can:
+          </p>
+          <ul>
+             <li>see available appointment times</li>
+             <li>make bookings</li>
+             <li>see upcoming appointments and get reminders</li>
+             <li>cancel or postpone appointments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l">Documentation</h2>
+          <p>
+            Everything your service needs to integrate with NHS Appointments.
+          </p>
+        </div>
+      </div>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Getting started",
+            headingClasses: "nhsuk-heading-m",
+            href: "#",
+            clickable: true,
+            description: "What NHS Appointments does, how it works and what you need before you start."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "API reference",
+            headingClasses: "nhsuk-heading-m",
+            href: "#",
+            clickable: true,
+            description: "Endpoints for surfacing, updating and cancelling appointments."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Integration guide",
+            headingClasses: "nhsuk-heading-m",
+            href: "#",
+            clickable: true,
+            description: "A step-by-step walkthrough to connect your booking system."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Design patterns",
+            headingClasses: "nhsuk-heading-m",
+            href: "#",
+            clickable: true,
+            description: "How appointments look and behave for people in the NHS App."
+          }) }}
+        </li>
+      </ul>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l">Try it in the sandbox</h2>
+          <p>
+            The sandbox is a safe test environment with sample data. Use it to try NHS Appointments and build your integration before connecting to live systems.
+          </p>
+          <p>You need an NHS email address to sign up. The sandbox is only open to people with an <b>nhs.uk</b> or <b>nhs.net</b> email.</p>
+
+          <form action="/appointments/sandbox-confirmation" method="post" novalidate>
+            {{ input({
+              label: {
+                text: "NHS email address",
+                classes: "nhsuk-label--m"
+              },
+              hint: {
+                text: "For example anuerin.bevan@nhs.net"
+              },
+              id: "nhs-email",
+              name: "nhs-email",
+              type: "email",
+              autocomplete: "email",
+              spellcheck: false,
+              classes: "nhsuk-u-width-two-thirds"
+            }) }}
+
+            {{ button({
+              text: "Request sandbox access"
+            }) }}
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

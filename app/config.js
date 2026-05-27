@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Digital health platforms',
+  serviceName: 'NHS App for local health services',
 
   // Port to run the prototype on locally
   port: 3000
