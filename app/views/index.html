@@ -3,185 +3,176 @@
 {% set pageName = "" %}
 {% block main %}
   {{ hero({
-    heading: "Connect local NHS services to the NHS App",
-    text: "Help people get the most from their local health services by making the services they need part of the NHS App."
+    heading: "Help more people use their local health services",
+    text: "Use free tools and services to make your service part of the NHS App."
   }) }}
   <div class="nhsuk-width-container">
     <main class="nhsuk-main-wrapper" id="maincontent">
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h2 class="nhsuk-heading-l">
-            Make your service part of the NHS App
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-m">
+            Built for the NHS, by the NHS
           </h2>
           <p>
-            When more services connect to the NHS App, more people can find and use them. Use free,
-            self-serve components to integrate your service with the NHS App.
+            Free and secure with technical and clinical safeguards in place.
           </p>
-          <p class="app-list-lead-in">
-            These tools are free to anyone who works for:
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-m">
+            Connected to the rest of the NHS
+          </h2>
+          <p>
+            Designed to work with the NHS App, giving a better experience.
           </p>
-          <ul>
-            <li>
-              NHS Trusts
-            </li>
-            <li>
-              Integrated Care Boards
-            </li>
-            <li>
-              GP surgeries
-            </li>
-            <li>
-              NHS pharmacies
-            </li>
-            <li>
-              NHS dentists
-            </li>
-            <li>
-              providers of NHS-commissioned services
-            </li>
-          </ul>
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-m">
+            Quick to get started, adapts to your needs
+          </h2>
+          <p>
+            Try it straight away. Works with common EPRs, or as a stand‑alone product.
+          </p>
         </div>
       </div>
-      <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
         <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Help people book appointments for your service
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
+          <h2 class="nhsuk-heading-l">
+            Choose the parts you need
+          </h2>
           <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="/appointments">Find out more about booking appointments</a>
+            Offer people the services they need, each works on its own or with others.
           </p>
         </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
       </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Send test kits to people
-          </h3>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Book appointments",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--appointments",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.25V14"/><circle cx="16" cy="16" r="6"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Take bookings, changes and cancellations.</p>
+            '
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Send messages and reminders",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--messages",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Message people at the right time.</p>
+            '
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Arrange common tests",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--tests",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3"/><path d="m16 2 6 6"/><path d="M12 16H4"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Offer a choice of testing locations.</p>
+            '
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Share test results",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--results",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Share results and explain what they mean.</p>
+            '
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Share appointment notes",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--notes",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Show people what was discussed.</p>
+            '
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          {{ card({
+            heading: "Share device data",
+            headingClasses: "nhsuk-heading-m",
+            headingLevel: 3,
+            href: "#",
+            clickable: true,
+            classes: "app-card--icon app-card--device",
+            descriptionHtml: '
+              <span class="app-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="1.57 1.57 20.87 20.87" fill="none" stroke="currentColor" stroke-width="1.74" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2.5"/><path d="M9.5 7V5.5A1.5 1.5 0 0 1 11 4h2a1.5 1.5 0 0 1 1.5 1.5V7"/><path d="M9.5 17v1.5A1.5 1.5 0 0 0 11 20h2a1.5 1.5 0 0 0 1.5-1.5V17"/><path d="M18 10.75v2.5"/></svg>
+              </span>
+              <p class="nhsuk-card__description">Collect readings from people’s devices.</p>
+            '
+          }) }}
+        </li>
+      </ul>
+      <section class="nhsuk-u-margin-top-6">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <h2 class="nhsuk-heading-l">Integration in numbers</h2>
+          </div>
         </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about finding eligible people</a>
-          </p>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-third">
+            <p class="nhsuk-heading-m nhsuk-u-margin-bottom-1">26.9 million</p>
+            <p class="nhsuk-body">people logged into the NHS App in the past year</p>
+            <p class="nhsuk-hint">NHS England, 12 months to March 2026</p>
+          </div>
+
+          <div class="nhsuk-grid-column-one-third">
+            <p class="nhsuk-heading-m nhsuk-u-margin-bottom-1">62.3 million</p>
+            <p class="nhsuk-body">logins in a single month</p>
+            <p class="nhsuk-hint">NHS England, November 2025</p>
+          </div>
+
+          <div class="nhsuk-grid-column-one-third">
+            <p class="nhsuk-heading-m nhsuk-u-margin-bottom-1">67.8 million</p>
+            <p class="nhsuk-body">repeat prescriptions ordered in a year</p>
+            <p class="nhsuk-hint">NHS England, 12 months to November 2025</p>
+          </div>
         </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Find the people who are eligible for your service
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about finding eligible people</a>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Send people timely messages and reminders
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about messages and reminders</a>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Let people share data from their health devices
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about sharing device data</a>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Help people to understand their health and spot risks
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about health assessments</a>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <h3 class="nhsuk-heading-m">
-            Share results and explain what they mean
-          </h3>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p>
-            Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tenetur excepturi reiciendis, possimus, praesentium quas corrupti cumque dolores beatae. Mollitia vitae pariatur ea soluta? Maxime asperiores veritatis consectetur modi et aliquam.
-          </p>
-          <p>
-            <a href="#">Find out more about test results</a>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <img src="https://placehold.co/600x400" alt="">
-        </div>
-      </div>
+        {# Source:
+          - https://www.england.nhs.uk/2025/12/record-numbers-using-nhs-app-to-manage-health
+          - https://digital.nhs.uk/data-and-information/publications/statistical/nhs-app-statistics
+        #}
+      </section>
     </main>
   </div>
 {% endblock %}

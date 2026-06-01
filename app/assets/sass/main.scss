@@ -3,6 +3,16 @@
 
 // Add your custom CSS/Sass styles below.
 
+// Suppress the visited state on all links, so clicking a product card (or any
+// other link) doesn't turn it purple — they always look "unvisited". Uses the
+// NHS.UK mixin, which resets :visited (and its hover/active/focus variants)
+// back to the standard link colour.
+.nhsuk-card__heading a,
+.nhsuk-card__link,
+a {
+  @include nhsuk-link-style-no-visited-state;
+}
+
 // Stop images overflowing their grid column / the page,
 // and add space below each one.
 img {
@@ -16,4 +26,65 @@ img {
 // List items use nhsuk-spacing(2) (8px), so match that here.
 .app-list-lead-in {
   margin-bottom: nhsuk-spacing(2);
+}
+
+// Product icons on the home page cards (Lucide SVGs).
+// The macro renders the heading before the description, so lay the card content
+// out as a flex column and pull the icon to the top with `order` — that puts it
+// above the heading as well as the description.
+.app-card--icon .nhsuk-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+// Tinted icon badge, mirroring the "demo unit" header style in the xpsDemo app:
+// a pale tint background with the icon in the matching accent colour. The two
+// colours come from CSS custom properties set by the per-product classes below.
+.app-card__icon {
+  order: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: nhsuk-spacing(3);
+  border-radius: 8px;
+  color: var(--app-icon-colour);
+  background-color: var(--app-icon-tint);
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+// Colour palette mirrored from the xpsDemo DemoUnit groupings (light appearance).
+.app-card--appointments {
+  --app-icon-colour: #00386e; // NHSAppDarkBlue
+  --app-icon-tint: #ccdff1;   // NHSAppPaleBlue
+}
+
+.app-card--results {
+  --app-icon-colour: #004c23; // NHSAppDarkGreen
+  --app-icon-tint: #cce5d8;   // NHSAppPaleGreen
+}
+
+.app-card--notes {
+  --app-icon-colour: #402463; // NHSAppDarkPurple
+  --app-icon-tint: #ded6e8;   // NHSAppPalePurple
+}
+
+.app-card--tests {
+  --app-icon-colour: #681645; // NHSAppDarkPink
+  --app-icon-tint: #efd3e3;   // NHSAppPalePink
+}
+
+.app-card--messages {
+  --app-icon-colour: #5a390f; // NHSAppDarkOrange
+  --app-icon-tint: #f8e8cf;   // NHSAppPaleOrange
+}
+
+.app-card--device {
+  --app-icon-colour: #25514d; // NHSAppDarkAquaGreen
+  --app-icon-tint: #c9e3e0;   // NHSAppPaleAquaGreen
 }
